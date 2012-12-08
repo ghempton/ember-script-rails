@@ -19,9 +19,14 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
+    "README.md",
     "Rakefile",
-    "VERSION"
+    "VERSION",
+    "ember_script-rails.gemspec",
+    "lib/ember_script-rails.rb",
+    "lib/ember_script/rails/railtie.rb"
   ]
   s.homepage = "http://github.com/ghempton/ember-script-rails"
   s.licenses = ["MIT"]
