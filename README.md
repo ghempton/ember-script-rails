@@ -1,6 +1,6 @@
 = ember-script-rails
 
-Description goes here.
+See the main [EmberScript Ruby](https://github.com/ghempton/ember-script-ruby) repo.
 
 == Contributing to ember-script-rails
  
