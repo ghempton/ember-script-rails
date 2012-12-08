@@ -1,8 +1,3 @@
-PATH
-  remote: /Users/ghempton/projects/oss/ember-script-ruby
-  specs:
-    ember_script (0.0.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -38,6 +33,8 @@ GEM
     builder (3.0.4)
     coderay (1.0.8)
     diff-lcs (1.1.3)
+    ember_script (0.0.1)
+      tilt
     erubis (2.7.0)
     git (1.2.5)
     hike (1.2.1)
@@ -123,7 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  ember_script!
+  ember_script
   jeweler
   pry
   pry-doc
