@@ -1,2 +1,2 @@
 require 'ember_script'
-require 'ember_script/rails/railtie'
+require 'ember_script/rails/engine'
