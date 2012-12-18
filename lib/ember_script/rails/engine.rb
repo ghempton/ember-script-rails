@@ -3,11 +3,9 @@ module EmberScript
     class Engine < ::Rails::Engine
       config.ember_script = ActiveSupport::OrderedOptions.new
 
-      initializer "ember_script.setup", :after => :append_assets_path, :group => :all do |app|
-        require 'ember_script-rails'
-
+      initializer "ember_script.setup", :after => :'load_environment_config', :group => :all do |app|
         if app.config.assets.enabled
-          app.assets.register_engine '.em', EmberScript::EmberScriptTemplate
+          (Sprockets.respond_to?('register_engine') ? Sprockets : app.assets).register_engine '.em', EmberScript::EmberScriptTemplate
         end
       end
     end
