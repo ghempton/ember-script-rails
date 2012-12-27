@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler'
+require 'rspec/core/rake_task'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -11,16 +12,10 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "ember_script-rails"
-  gem.homepage = "http://github.com/ghempton/ember-script-rails"
-  gem.license = "MIT"
-  gem.summary = %Q{EmberScript Rails integration}
-  gem.description = %Q{Support for EmberScript templates with .em extension}
-  gem.email = "ghempton@gmail.com"
-  gem.authors = ["Gordon L. Hempton"]
-  # dependencies defined in Gemfile
+RSpec::Core::RakeTask.new do |t|
+  t.pattern = "spec/**/*_spec.rb"
+  t.rspec_opts = '--color --format progress'
+  t.verbose = false
 end
-Jeweler::RubygemsDotOrgTasks.new
+
+require 'appraisal'

@@ -7,4 +7,6 @@ before_install:
  - sudo apt-get update
  - sudo apt-get -y install nodejs npm
  - sudo npm install -g 'git://github.com/ghempton/ember-script.git#HEAD'
-script: "rspec"
+ - gem install bundler --version '>= 1.2.2'
+before_script: "bundle exec rake appraisal:install"
+script: "bundle exec rake appraisal spec"

@@ -5,7 +5,12 @@ module EmberScript
 
       initializer "ember_script.setup", :after => :'load_environment_config', :group => :all do |app|
         if app.config.assets.enabled
-          (Sprockets.respond_to?('register_engine') ? Sprockets : app.assets).register_engine '.em', EmberScript::EmberScriptTemplate
+          sprockets = if ::Rails::VERSION::MAJOR == 4
+            Sprockets.respond_to?('register_engine') ? Sprockets : app.assets
+          else
+            app.assets
+          end
+          sprockets.register_engine '.em', EmberScript::EmberScriptTemplate
         end
       end
     end
