@@ -49,9 +49,8 @@ GIT
 PATH
   remote: /Users/ghempton/projects/oss/ember-script-rails
   specs:
-    ember_script-rails (0.0.2)
-      ember_script
-      pry
+    ember_script-rails (0.0.3)
+      ember_script (>= 0.0.4)
       rails
 
 GEM
@@ -63,11 +62,15 @@ GEM
     arel (3.0.2)
     atomic (1.0.1)
     builder (3.1.4)
-    coderay (1.0.8)
     diff-lcs (1.1.3)
-    ember_script (0.0.3)
+    ember_script (0.0.4)
+      ember_script-source (>= 0.0.2)
+      execjs
       tilt
+    ember_script-source (0.0.2)
     erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     hike (1.2.1)
     i18n (0.6.1)
     json (1.7.5)
@@ -75,15 +78,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    method_source (0.8.1)
     mime-types (1.19)
     minitest (4.3.3)
     multi_json (1.5.0)
     polyglot (0.3.3)
-    pry (0.9.10)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.3.1)
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -105,7 +103,6 @@ GEM
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
-    slop (3.3.3)
     sprockets (2.8.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
