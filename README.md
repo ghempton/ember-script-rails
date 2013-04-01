@@ -4,14 +4,6 @@ Provides integration with Rail's asset pipeline. Any javascript files with the e
 
 ## Installation
 
-This gem requires that an `ember-script` command be available in the current path. Being as EmberScript is still in early development, it is best to install via npm from git. After installing [Node.js](http://nodejs.org/), run the following command:
-
-```
-sudo npm install -g 'git://github.com/ghempton/ember-script.git#HEAD'
-```
-
-After installation, add the following to your Gemfile:
-
 ```
 gem 'ember_script-rails'
 ```
