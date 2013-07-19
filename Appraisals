@@ -3,6 +3,6 @@ appraise "rails3" do
 end
 
 appraise "rails4" do
-  gem 'rails', :git => 'https://github.com/rails/rails.git'
+  gem 'rails', '~> 4.0'
   gem 'activerecord-deprecated_finders', :git => 'https://github.com/rails/activerecord-deprecated_finders.git'
 end
