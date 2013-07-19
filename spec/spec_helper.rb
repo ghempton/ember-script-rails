@@ -16,8 +16,8 @@ require File.expand_path("../support/dummy_app/config/environment.rb",  __FILE__
 require 'rspec/core'
 
 RSpec::configure do |c|
-  c.backtrace_clean_patterns << /vendor\//
-  c.backtrace_clean_patterns << /lib\/rspec\/rails/
+  c.backtrace_exclusion_patterns << /vendor\//
+  c.backtrace_exclusion_patterns << /lib\/rspec\/rails/
 end
 
 # Extensions break w/ rails edge
