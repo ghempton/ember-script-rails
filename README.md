@@ -1,6 +1,6 @@
 # EmberScript-Rails
 
-Provides integration with Rail's asset pipeline. Any javascript files with the extension `.em` will automatically be compiled by [EmberScript](https://github.com/ghempton/ember-script).
+Provides integration with Rails' asset pipeline. Any javascript files with the extension `.em` will automatically be compiled by [EmberScript](https://github.com/ghempton/ember-script).
 
 ## Installation
 
