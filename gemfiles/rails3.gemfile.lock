@@ -1,9 +1,9 @@
 PATH
-  remote: /Users/ghempton/projects/oss/ember-script-rails
+  remote: ../
   specs:
     ember_script-rails (0.0.3)
       ember_script (>= 0.0.4)
-      rails
+      railties
 
 GEM
   remote: https://rubygems.org/
@@ -45,10 +45,9 @@ GEM
       ember_script-source (>= 0.0.2)
       execjs
       tilt
-    ember_script-source (0.0.8)
+    ember_script-source (0.0.14)
     erubis (2.7.0)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
+    execjs (2.2.2)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)

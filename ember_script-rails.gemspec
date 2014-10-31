@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency "ember_script", ">= 0.0.4"
-  gem.add_dependency "rails"
+  gem.add_dependency "railties"
 
   gem.add_development_dependency "bundler", [">= 1.2.2"]
   gem.add_development_dependency "appraisal"
