@@ -4,9 +4,9 @@ module EmberScript
       config.ember_script = ActiveSupport::OrderedOptions.new
 
       initializer "ember_script.setup", :after => :'load_environment_config', :group => :all do |app|
-        if app.config.assets.enabled || ::Rails::VERSION::MAJOR == 4
-          app.assets.register_engine '.em', EmberScript::EmberScriptTemplate
-          app.assets.register_engine '.js.em', EmberScript::EmberScriptTemplate
+        app.config.assets.configure do |env|
+          env.register_engine '.em', EmberScript::EmberScriptTemplate
+          env.register_engine '.js.em', EmberScript::EmberScriptTemplate
         end
       end
     end
